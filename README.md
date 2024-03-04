@@ -1,4 +1,4 @@
-# html-semantic-css-intro
+# html semantic / css intro
  This example is showing basic HTML semantic structure and how to add CSS to your website
 
 Check it out at: https://lange-lange.github.io/html-semantic-css-intro/index.html
