@@ -1,0 +1,504 @@
+<!-- remember the sandwich analogy? the html represents the root of an HTML document or the bread. the head section is the toppings. the body is the protein. don't forget to top your protein with toppings (head), and wrap your sandwich's protein (body) in bread (html)
+
+ref: https://www.w3schools.com/html/html5_semantic_elements.asp 
+
+animated gifs are from tenor.com 
+-->
+
+<!DOCTYPE html>
+
+<!-- defining the document's language as English -->
+<html lang="en">
+
+<!-- "UTF (Unicode Transformation Format) is a universal character set that defines all the characters needed for writing the majority of living languages in use on computers." 
+— ref: https://www.w3schools.com/charsets/ref_html_utf8.asp -->
+<meta charset="UTF-8">
+
+<!-- this line of code ensures the content is viewable within the device-width, ensuring responsive from the get-go. without it, your site will break on mobile/tablet! 
+— ref: https://www.w3schools.com/css/css_rwd_viewport.asp -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<!--this is placeholder! change to your website's name for each page, this title appears in browser tab bookmarks and search engines-->
+<title>Homepage Name</title>
+
+<!-- this is where you link your .css file externally. remember in class, this was the 3rd way to link css. 
+1. inline which overrides the, 
+2. internal which overides the,
+3. external -->
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+/* CSS is made up of declaring blocks, rules that cascade to change one instance or multiple instances of styles. it's the sprinkles on a ice cream cone. the sauce of a taco. it can also be a great way to position elements on multiple pages consistently and programatically. it's powerful, you can even draw shapes with CSS.
+
+1. ID vs 
+2. CLASS
+
+1. id: a pound key or hashtag in front denotes an ID, which can only appear once on a page, helpful for anchor/jump links on the same page.
+
+#id {
+    property: value;
+}
+
+2. class: a period in front denotes a class. replace .class with any selector as long as it is defined in your html too.
+
+.class {
+    property: value;
+}
+
+*/
+
+/* to use the universal selector, use the asterisk character, *. 
+ref: https://www.freecodecamp.org/news/css-selectors-cheat-sheet-for-beginners/#universal
+if you want to remove the default margin, here's how:
+
+* {
+  padding: 0;  
+  margin: 0;
+}
+
+*/
+
+* {
+    scroll-behavior: smooth;
+
+/* check out a fun way to make all type the same size, though i wouldn't recommend as it removes hierarchy. depends on the context of course!
+    font-size: 1.25rem;*/
+}
+
+/* here's an example of creating a container to place my content within using viewport with and margin: auto to center
+
+
+.container {
+    margin: auto;
+    width: 80vw;
+    padding: 20px;
+}
+
+/* here's how to make the margin 0 for the body 
+body {
+    margin: 0;
+}*/
+
+/* L A Y O U T */
+
+/* here's how to create a simple float in html and a bit of css, float means to define an element that goes left or right. ref: https://www.w3schools.com/howto/howto_css_two_columns.asp 
+for more advanced layouts, check out CSS Grids or CSS Flexbox */
+
+.column {
+  float: left;
+  width: 50%;
+  width: ;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* P O S I T I O N I N G 
+
+here's how to make a division (div) position sticky with CSS 
+
+.sticky {
+    top: 0;
+    width: 100%;
+    position: sticky;
+    background-color: white;
+    filter: drop-shadow(2px 2px 20px pink);
+}
+
+*/
+
+/* here are some floats */
+
+.left {
+    float: left;
+    margin: 5px;
+
+}
+.right {
+    float: right;
+
+}
+
+/* here's how to position relative, which means you can change the left, top, bottom, right values to position elements */
+
+div.relative {
+  position: relative;
+  border: 1px solid blue;
+
+}
+
+/* here's how to position absolute, which means you can change the left, top, bottom, right values to position elements. works best when positioned within a relative parent container. otherwise, is removed from the document flow!!! which is mostly bad! */
+
+div.absolute {
+  position: absolute;
+  right: 0px;
+  height: 200px;
+  width: 200px;
+  border: 1px solid blue;
+}
+
+div.absolute-2 {
+  position: absolute;
+  right: 80vw;
+  z-index: -1;
+}
+
+/* here's a fun position fixed back to top element 
+
+.backtotop {
+    position: fixed;
+    right: 0.5%;
+    bottom: 1%;
+    font-size: 2rem;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    filter: drop-shadow(2px 2px 20px blue);
+    text-align: center;
+
+}
+
+*/
+header {
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* T Y P O G R A P H Y  &  L I N K S */
+
+nav a {
+    text-decoration: none;
+
+/* having some fun with the nav    
+    padding: 10px;
+    filter: drop-shadow(2px 2px 10px blue);
+    font-family: monospace;
+    text-transform: uppercase;
+    background-color: white;
+    border: 0;
+    line-height: 3em;
+
+    /* this keeps nav word items together 
+
+    white-space: nowrap; */
+
+}
+
+a:link {
+    color: hotpink;
+}
+
+a:visited {
+    color: hotpink;
+}
+
+a:hover {
+    color: blue;
+    transition: 2s;
+}
+
+/*ficaption can be pretty neat. it's a default html tag to position captions under figures (images). accessibility: screen readers like images as figures. */
+figcaption {
+    font-family: monospace;
+    font-size: 0.75rem;
+    color: slategrey;
+    text-transform: uppercase;
+}
+
+/*
+- ensured quotation marks are smart not straight! 
+ref: https://css-tricks.com/almanac/properties/q/quotes/
+and offset: ref: https://css-tricks.com/quoting-in-html-quotations-citations-and-blockquotes/*/
+blockquote {
+  font-style: italic;
+  text-indent: -0.45em;
+  quotes: "“" "”" "‘" "’";
+
+}
+blockquote::before {
+    content: open-quote;
+}
+blockquote::after {
+    content: close-quote;
+}
+
+/* how to make a dropshadow 
+ref: https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/drop-shadow */
+
+button {
+    padding: 10px;
+    filter: drop-shadow(2px 2px 10px blue);
+    font-family: monospace;
+    text-transform: uppercase;
+    background-color: white;
+    border: 0;
+}
+
+button a { 
+    text-decoration: none;
+}
+
+button a:hover {
+    filter: drop-shadow(3px 3px 20px blue);
+}
+
+
+</style>
+</head>
+
+
+
+<!-- this is how you write a comment describing your code in HTML. the body section is for all content that is visible. 
+keep it here! Semantic structure is just as important as syntax. -->
+<body>
+
+<!-- The <header> element represents a container for introductory content or a set of navigational links.-->
+<header>
+
+<h1>HTML: Semantics & CSS: Syntax</h1>
+
+    <nav>
+        <a href="https://docs.google.com/document/d/1kGJXt7dUiRI2CfYjNBglkXtNMqB39Nwb0QIDxxfJMVs/edit?usp=sharing" target="_blank">HTML First Page</a> |
+        <a href="https://docs.google.com/document/d/1fEcm_tGwygtzZCvYEHUmEZGy6bTX-o3zrV6rnGcxx7k/edit?usp=sharing" target="_blank">Cheat Sheet</a> |
+        <a href="https://linktr.ee/notreeisanisland" target="_blank">Starter Pack</a> |
+        <a href="https://hacks.mozilla.org/2019/10/why-is-css-so-weird/" target="_blank">Why is CSS so Weird?</a> |
+        <a href="https://lange-lange.github.io/position/">CSS Positioning</a> |
+        <a href="file:///Users/lange/Dropbox/_Langeland/________teaching/______Workshops%20+%20Walkthroughs/_____Web/css-flexbox-main/responsive-flexbox.html">CSS Flexbox</a> |
+        <a href="file:///Users/lange/Dropbox/_Langeland/________teaching/______Workshops%20+%20Walkthroughs/_____Web/css-grids-main/cssgrid.html">CSS Grids</a> |
+        Web Typography |
+        Relative Units |
+        Responsive |
+        Time-based (JS)  
+    </nav>
+
+</header>
+
+<div class="absolute-2"><img src="images/balenciaga-claudiamate.gif" alt="animation of a water droplet"></div>
+<div class="container">
+<section>
+    <div>
+	<h3>Introduction</h3>
+
+    <p>Hey class, in this example, right click or inspect and view source. Or go to my <a href="https://github.com/lange-lange?tab=repositories" target="_blank">Github page to download the .zip folder</a>. Then open the folder in your code editor of choice. Read the comments in HTML and CSS, to see what each element means.</p>
+    <p>First try to markup and style your layout and functions in HTML and CSS, before you include fancy JavaScript. This can more accessible to screen readers for people who require assistive technologies, be more interoperable, and cross-compatible.</p>
+    <p><span style="color:grey">Tip:</span> The basic semantic (structure) of any codebase is just as important as its syntax (spelling).</p>
+    </div>
+</section>
+
+<section class="sticky">
+<h3>On this page</h3>
+<div class="row">
+    <div class="column">
+    <!--<ul> = undordered list <ol> is ordered list -->
+    <ul>
+        <li><a href="#trouble">The trouble with HTML and CSS</li></a>
+        <li>Coding to Learn vs Learning to Code</li>
+        <li>CSS: Syntax & 3-Ways</li>
+    </ol>
+    </div>
+
+    <div class="column">
+    <ul>
+        <li>CSS: Class vs ID</li>
+        <li>CSS: Positioning 5-Ways</li>
+        <li>Footers and Floats</li>
+
+    </ul>
+</div>
+</section>
+
+<section>
+    <div>
+    <h3 id="trouble">The trouble with HTML and CSS</h3>
+    <blockquote>Some of the trouble with HTML and CSS lies with the fact that both languages are fairly simple, and often developers don't take them seriously, in terms of making sure the code is well-crafted, efficient, and semantically describes the purpose of the features on the page. In the worst cases, JavaScript is used to generate the entire web page content and style, which makes your pages inaccessible, and less performant (generating DOM elements is expensive). In other cases, nascent features are not supported consistently across browsers, which can make some features and styles not work for some users. Responsive design problems are also common — a site that looks good in a desktop browser might provide a terrible experience on a mobile device, because the content is too small to read, or perhaps the site is slow because of expensive animations.</blockquote> 
+    — <a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#the_trouble_with_html_and_css" target="_blank">MDN Web Docs</a>
+    </div>
+</section>
+
+    
+<section>
+    <div>
+        <h3>Coding to Learn vs Learning to Code</h3>
+
+    <p>Coding to Learn is all about reading the documentation. Be patient. Be methodological. Learn how to learn, by troubleshooting with a peer, and trying it yourself through trial and error. If you're struggling, review the Coding Tips PDF. The blessing and the curse of creative coding is that there will be a half-dozen different ways to accomplish a goal. Be open to <a href="https://frankchimero.com/blog/2013/what-screens-want/" target="_blank">flux</a>, change, and surprise. If you're open to it: there can often be joy and delight too. Overcoming challenges can be fulfilling.
+    <blockquote>Fundamentally, creativity is a question of time. Mostly of our daily activity with computers happens through hopefully speedy but ossified software. We use the computer in “speedrun mode.”19 This is the paradox of creative coding: the coding part is supposed to make things faster, the creative part requires that things go slowly.</blockquote>
+    <p>— from <i><a href="https://silviolorusso.com/publication/learn-to-code-vs-code-to-learn/" target="_blank">Learn to Code vs. Code to Learn: Creative Coding Beyond the Economic Imperative</a></i> by Silvio Lorusso</p> 
+    </div>
+</section>
+
+
+<section>
+    <div class="row">
+        <h3>CSS: Syntax & 3-Ways</h3>
+        <figure class="left"><img src="images/css-syntax.png"></figure>
+        <figure class="right"><img src="images/css-syntax-1.jpeg"></figure>
+        <p>A CSS rule consists of a selector and a declaration block.</p>
+        <figure class="left">
+            <img src="images/css-3-ways-to-link.webp"><figcaption></figcaption>
+        </figure>
+        <p>There are 3-ways to integrate CSS into your HTML</p>
+        <ol>
+            <li><span style="color:lightgrey;">Inline <sup>(bad)</sup></li>
+            <li><span style="color:darkgray;">Internal </span><sup>(better)</sup></li>
+            <li><span style="color:grey;">External</span> <sup>(best)</sup></li>
+        </ol>
+        <p>For more, check out: <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started" target="_blank">Getting Started with CSS from Mozilla</a></p>
+    </div>
+</section>
+
+
+<section>
+    <div class="row">
+        <h3>CSS: Class vs ID</h3>
+        <figure class="right"><img src="images/Difference-Between-id-and-class-in-CSS-Comparison-Summary.jpg"><figcaption>Placeholder Credit: TBA</figcaption></figure>
+        <p>Class = Multiple. ID = One. Think of a CSS Class as a stream of water, cascading down to multiple elements on the page<sup style="color:grey">(internal)</sup>, and multiple pages <sup style="color:grey">(external)</sup>. 
+
+        <ul>
+        <li>IDs can only be applied to <span style="color:grey">one instance</span>.</li> 
+        <li>Classes can be applied to <span style="color:grey">multiple instances</span>.</li>
+        </ul>
+
+        </p>
+        <p>For more on the uses of IDs, check out: <a href="https://www.w3docs.com/snippets/html/how-to-create-an-anchor-link-to-jump-to-a-specific-part-of-a-page.html" target="_blank">W3D: How to Add an Anchor Link to Jump to a Specific Part of a Page</a></p>
+    </div>
+</section>
+
+<section>
+    <div>
+    <h3>CSS: Positioning 5-Ways</h3>
+       <div> <figure class="right"><img src="images/waterfall.gif"><figcaption>Placeholder Credit: TBA</figcaption></figure>
+        <ol>
+            <li><b>static</b></li><p>HTML elements are positioned static by default. <span style="color:grey">Static positioned elements are <i>not affected</i> by the top, bottom, left, and right properties.</span> An element with position: static; is not positioned in any special way; it is always positioned according to the normal flow of the page.</p>
+
+            <li><b>relative</b></li>
+            <p>An element with position: relative; is positioned relative to its normal position. <span style="color:grey">Setting the top, right, bottom, and left properties of a relatively-positioned element <i>will</i> cause it to be adjusted away from its normal position.</span> Other content will not be adjusted to fit into any gap left by the element. For an example: scroll down to <a href="#example2">Figure. 2: Relative.</a>
+            </p>
+
+            <li><b>fixed</b></li>
+            <p>An example of position fixed is the back to top button, positioned in the bottom right of your viewport. <span style="color:grey">Use with caution as these can be annoying, when you take up too much of the user's viewport.</span></p>
+
+            <li><b>absolute</b></li>
+            <p><span style="color:grey">Note: Absolute positioned elements are removed from the normal flow, and can overlap elements</span>. <span style="color:red">Use with caution! However they are useful when positioned <i>within a relative container</i></span>.
+                
+            </p>
+            <li><b>sticky</b></li>
+            <p>An example of position sticky is the on-page navigation on this page. It sticks with you as you scroll, until the next element that was positioned sticky comes into view. <span style="color:grey">Note: Similar to fixed, use with caution as these can be annoying when you take up too much of the user's viewport.</span></p>
+        </ol>
+    </div>
+    <br><br>
+    <div id="example2">
+        <div class="relative">Example 2. position: relative: This div element has position: <b>relative</b>. However; if an absolute positioned element has no positioned ancestors, it uses the <b>document body</b>, and moves along with page scrolling.
+        <div class="absolute">Example 4. position: absolute: This text is <b>absolutely positioned</b> <i>within</i> a <b>relative container</b>. An element with position: absolute; is positioned relative to the nearest positioned ancestor. <span style="color:red">Caution! Absolute positioned elements are removed from the normal flow, and can overlap elements.</span></div>
+    </div>
+
+
+<div>
+    
+    <h3>CSS: Padding</h3>
+    <figure><img src="images/css-padding-properties.png"></figure>
+    <p>CSS: Padding is strange! CSS <i>is</i> weird (yet powerful and beautiful).</p>
+
+
+</div>
+    <div>
+        <p>For more: see my <a href="https://lange-lange.github.io/position/index.html" target="_blank">Github CSS: Positioning example showing all 5 ways.</a>
+    </div>
+</section>
+
+<section>
+    <div>
+        <h3>CSS Cheatsheet</h3>
+        <p>Need more selectors? Check out below!
+
+        </p>
+    </div>
+</section>
+
+<figure>
+    <img src="images/css-cheatsheet.png">
+<figcaption><button><a href="https://i.pinimg.com/originals/37/9d/b5/379db57fefcaaeb28906b811490db468.png">Download the full image</a></button></figcaption>
+</figure>
+<br>
+<p><span style="color:grey">Did you know?</span> Buttons are a default html element. Want to style them even further? Check out: <a href="https://css-tricks.com/a-complete-guide-to-links-and-buttons/" target="_blank">CSS Tricks Complete Guide to Links and Buttons</a></p>
+
+
+<!--
+The <footer> element defines a footer for a document or section.
+A <footer> element typically contains:
+    - authorship information
+    - copyright information
+    - contact information
+    - sitemap
+    - back to top links
+    - related documents
+ref: https://www.w3schools.com/html/html5_semantic_elements.asp
+
+/* here's how to create a simple float in html and a bit of css, float means to define an element that goes left or right. 
+ref: https://www.w3schools.com/howto/howto_css_two_columns.asp 
+for more advanced layouts, check out CSS Grids or CSS Flexbox */
+-->
+<footer>
+<h3>This is how to make a simple 2-column layout using <a href="https://www.w3schools.com/Css/css_float.asp" target="_blank">floats</a></h3>
+<div class="row">
+    <div class="column">
+    <!--<ul> = undordered list <ol> is ordered list -->
+    <ul>
+        <li>Unordered List using 'ul' </li>
+        <li>Item two</li>
+        <li>Item three</li>
+        <li>Item four</li>
+    </ul>
+    </div>
+
+    <div class="column">
+    <ol>
+        <li>Ordered List using 'ol'</li>
+        <li>Item two</li>
+        <li>Item three</li>
+        <li>Item four</li>
+    </ol>
+    </div>
+</div>
+<div class="row">
+    <p><span style="color:grey">Want to float more?</span> Check out: <a href="https://www.w3schools.com/Css/tryit.asp?filename=trycss_layout_float3" target="_blank">W3C: Float Next to Each Other</a></p></div>
+</div>
+
+</footer>
+        <figure class="left">
+            <img src="images/ice-cream-in-a-cone-isolated-1465725727v7W.jpg"><figcaption>PHOTO: Ekaterina Sysoeva, <a href="https://www.publicdomainpictures.net/en/view-image.php?image=174511&picture=ice-cream-in-a-cone-isolated" target="_blank">Public Domain Pictures</a></figcaption>
+        </figure>
+<h1>Keep Practicing Daily:</h1>
+<nav><h2>
+  <a href="https://docs.google.com/document/d/1kGJXt7dUiRI2CfYjNBglkXtNMqB39Nwb0QIDxxfJMVs/edit?usp=sharing" target="_blank">HTML First Page</a> |
+  <a href="https://docs.google.com/document/d/1fEcm_tGwygtzZCvYEHUmEZGy6bTX-o3zrV6rnGcxx7k/edit?usp=sharing" target="_blank">Cheat Sheet</a> |
+  <a href="https://linktr.ee/notreeisanisland" target="_blank">Starter Pack</a> |
+  <a href="https://hacks.mozilla.org/2019/10/why-is-css-so-weird/" target="_blank">Why is CSS so Weird?</a> |
+  <a href="https://lange-lange.github.io/position/">CSS Positioning</a> |
+  <a href="file:///Users/lange/Dropbox/_Langeland/________teaching/____Workshops%20+%20Walkthroughs/_____Web/css-flexbox-main/responsive-flexbox.html">CSS Flexbox</a> |
+  <a href="file:///Users/lange/Dropbox/_Langeland/________teaching/____Workshops%20+%20Walkthroughs/_____Web/css-grids-main/cssgrid.html">CSS Grids</a> |
+  Web Typography |
+  Relative Units |
+  Responsive |
+  Time-based (JS) |
+</h2>
+</nav>
+
+<h3 style="font-family:cursive;">Enjoy the ride</h3>
+    <div class="backtotop">
+        <a href="#">⇡</a>
+    </div>
+</div>
+</body>
+</html>
