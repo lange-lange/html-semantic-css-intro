@@ -20,7 +20,7 @@ animated gifs are from tenor.com
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 <!--this is placeholder! change to your website's name for each page, this title appears in browser tab bookmarks and search engines-->
-<title>Homepage Name</title>
+<title>HTML Recap & CSS Intro</title>
 
 <!-- this is where you link your .css file externally. remember in class, this was the 3rd way to link css. 
 1. inline which overrides the, 
@@ -28,7 +28,10 @@ animated gifs are from tenor.com
 3. external -->
 <link rel="stylesheet" href="style.css">
 
+<head>
 <style>
+
+/* #2. internal which overides the inline
 
 /* CSS is made up of declaring blocks, rules that cascade to change one instance or multiple instances of styles. it's the sprinkles on a ice cream cone. the sauce of a taco. it can also be a great way to position elements on multiple pages consistently and programatically. it's powerful, you can even draw shapes with CSS.
 
@@ -45,12 +48,13 @@ animated gifs are from tenor.com
 
 .class {
     property: value;
+    property: value;
+    property: value;
 }
 
 
-
-
 note padding is super weird on CSS.
+ref: https://www.w3schools.com/csS/css_padding.asp
 for example in: 
 
 padding: 25px 50px 75px 100px;
@@ -65,7 +69,6 @@ therefore, use the padding shorthand property with four values:
 div {
   padding: [top]px [right]px [bottom]px [left]px;
 } 
-
 
 
 
@@ -124,7 +127,7 @@ for more advanced layouts, check out CSS Grids or CSS Flexbox */
 
 /* P O S I T I O N I N G 
 
-here's how to make a division (div) position sticky with CSS 
+here's how to make a division (div) position sticky with CSS */
 
 .sticky {
     top: 0;
@@ -141,11 +144,10 @@ here's how to make a division (div) position sticky with CSS
 .left {
     float: left;
     margin: 5px;
-
 }
+
 .right {
     float: right;
-
 }
 
 /* here's how to position relative, which means you can change the left, top, bottom, right values to position elements */
@@ -153,7 +155,6 @@ here's how to make a division (div) position sticky with CSS
 div.relative {
   position: relative;
   border: 1px solid blue;
-
 }
 
 /* here's how to position absolute, which means you can change the left, top, bottom, right values to position elements. works best when positioned within a relative parent container. otherwise, is removed from the document flow!!! which is mostly bad! */
@@ -172,8 +173,12 @@ div.absolute-2 {
   z-index: -1;
 }
 
-/* here's a fun position fixed back to top element 
+/* 
 
+ref: https://www.toptal.com/designers/htmlarrows/arrows 
+
+here's a fun position fixed back to top element 
+*/
 .backtotop {
     position: fixed;
     right: 0.5%;
@@ -197,14 +202,46 @@ img {
     height: auto;
 }
 
+h1, h2, h3 {
+    margin-top: 3rem;
+    font-family: sans-serif;
+    letter-spacing: -0.1rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+    }
+
+p {
+    font-size: 0.875rem;
+    }
+
+.parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 
 /* media query for a less unruly responsive layout, saying that after 801px, show all images as 49% of the viewport width */
 
 @media (min-width: 800px) {
-  img {
+img {
     width: 49vw;
-  }
+    }
+
+p {
+    font-size: 1.25rem;
+    }
   /*  notice the extra curly brace */
 }
 
@@ -213,22 +250,22 @@ img {
 
 /* T Y P O G R A P H Y  &  L I N K S */
 
+
+
+
+
 nav a {
     text-decoration: none;
 
-/* having some fun with the nav    
+/* having some fun with the nav  */   
     padding: 10px;
     filter: drop-shadow(2px 2px 10px blue);
-    font-family: monospace;
-    text-transform: uppercase;
+    font-family: sans-serif;
     background-color: white;
     border: 0;
     line-height: 3em;
-
-    /* this keeps nav word items together 
-
-    white-space: nowrap; */
-
+    /* this keeps nav word items together */
+    white-space: nowrap; 
 }
 
 a:link {
@@ -272,13 +309,16 @@ blockquote::after {
 /* how to make a dropshadow 
 ref: https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/drop-shadow */
 
-button {
-    padding: 10px;
+button-2 {
+    padding: 20px;
+    margin: 20px;
     filter: drop-shadow(2px 2px 10px blue);
     font-family: monospace;
     text-transform: uppercase;
     background-color: white;
     border: 0;
+    display: inline-block;
+
 }
 
 button a { 
@@ -302,20 +342,20 @@ keep it here! Semantic structure is just as important as syntax. -->
 <!-- The <header> element represents a container for introductory content or a set of navigational links.-->
 <header>
 
-<h1>HTML Recap & CSS Intro</h1>
-
-    <nav>
-        <a href="https://docs.google.com/document/d/1kGJXt7dUiRI2CfYjNBglkXtNMqB39Nwb0QIDxxfJMVs/edit?usp=sharing" target="_blank">HTML First Page</a> |
-        <a href="https://docs.google.com/document/d/1fEcm_tGwygtzZCvYEHUmEZGy6bTX-o3zrV6rnGcxx7k/edit?usp=sharing" target="_blank">Cheat Sheet</a> |
-        <a href="https://linktr.ee/notreeisanisland" target="_blank">Starter Pack</a> |
-        <a href="https://hacks.mozilla.org/2019/10/why-is-css-so-weird/" target="_blank">Why is CSS so Weird?</a> |
-        <a href="https://lange-lange.github.io/position/">CSS Positioning</a> |
-        <a href="https://lange-lange.github.io/css-flexbox-part-2/responsive-flexbox.html">CSS Flexbox</a> |
-        <a href="https://lange-lange.github.io/css-grids/cssgrid.html">CSS Grids</a> |
+    <h1>HTML Recap & CSS Intro</h1>
+    <nav><p>
+        <a href="https://docs.google.com/document/d/1kGJXt7dUiRI2CfYjNBglkXtNMqB39Nwb0QIDxxfJMVs/edit?usp=sharing" target="_blank">HTML First Page</a> 
+        <a href="https://docs.google.com/document/d/1fEcm_tGwygtzZCvYEHUmEZGy6bTX-o3zrV6rnGcxx7k/edit?usp=sharing" target="_blank">Cheat Sheet</a> 
+        <a href="https://linktr.ee/notreeisanisland" target="_blank">Starter Pack</a> 
+        <a href="https://hacks.mozilla.org/2019/10/why-is-css-so-weird/" target="_blank">Why is CSS so Weird?</a> 
+        <a href="https://lange-lange.github.io/position/">CSS Positioning</a> 
+        <a href="https://lange-lange.github.io/css-flexbox-part-2/responsive-flexbox.html">CSS Flexbox</a> 
+        <a href="https://lange-lange.github.io/css-grids-part-2/">CSS Grids</a> 
         Web Typography |
         Relative Units |
         Responsive |
-        Time-based (JS)  
+        Time-based (JS) 
+        </p> 
     </nav>
 
 </header>
@@ -324,9 +364,14 @@ keep it here! Semantic structure is just as important as syntax. -->
 <div class="container">
 <section>
     <div>
-	<h3>Introduction</h3>
+	<h2>Introduction</h2>
 
-    <p>Hey class, in this example, right click or inspect and view source. Or go to:</p> <button><a href="https://github.com/lange-lange/html-semantic-css-intro" target="_blank">Github > Code > Download .zip of HTML Semantic - CSS Intro</a></button> 
+    <p>Hey class, in this example, right click or inspect and view source. Or go to:</p> 
+    
+
+    <div class="parent"><button-2><a class="child" href="https://github.com/lange-lange/html-semantic-css-intro" target="_blank">Github > Code > Download .zip</a></button-2> 
+    </div>
+
     <p>Then open the folder in your code editor of choice. Read the comments in HTML and CSS, to see what each element means.</p>
     <p>First try to markup and style your layout and functions in <a href="https://www.w3schools.com/html/html5_semantic_elements.asp" target="_blank">*semantic HTML*</a> and simple CSS, before you include fancy JavaScript. This can more accessible to screen readers for people who require assistive technologies, be more interoperable, and cross-compatible.</p>
     <p><span style="color:grey">Tip:</span> The basic semantic (structure) of any codebase is just as important as its syntax (spelling).</p>
@@ -334,25 +379,24 @@ keep it here! Semantic structure is just as important as syntax. -->
 </section>
 
 <section class="sticky">
-<h3>On this page</h3>
-<div class="row">
-    <div class="column">
-    <!--<ul> = undordered list <ol> is ordered list -->
-    <ul>
-        <li><a href="#trouble">The trouble with HTML and CSS</li></a>
-        <li>Coding to Learn vs Learning to Code</li>
-        <li>CSS: Syntax & 3-Ways</li>
-    </ol>
-    </div>
-
-    <div class="column">
-    <ul>
-        <li>CSS: Class vs ID</li>
-        <li>CSS: Positioning 5-Ways</li>
-        <li>Footers and Floats</li>
-
-    </ul>
-</div>
+    <h3>On this page</h3>
+        <div class="row">
+            <div class="column">
+            <!--<ul> = undordered list <ol> is ordered list -->
+            <ul>
+                <li><a href="#trouble">The trouble with HTML and CSS</a></li>
+                <li><a href="#codingtolearn">Coding to Learn vs Learning to Code</a></li>
+                <li><a href="#syntax3ways">CSS: Syntax & 3-Ways</a></li>
+            </ul>
+            </div>
+        
+            <div class="column">
+            <ul>
+                <li><a href="#classvsid">CSS: Class vs ID</a></li>
+                <li><a href="#positioning">CSS: Positioning 5-Ways</a></li>
+                <li><a href="#footers-floats">Footers and Floats</a></li>
+            </ul>
+        </div>
 </section>
 
 <section>
@@ -366,7 +410,7 @@ keep it here! Semantic structure is just as important as syntax. -->
     
 <section>
     <div>
-        <h3>Coding to Learn vs Learning to Code</h3>
+        <h3 id="codingtolearn">Coding to Learn vs Learning to Code</h3>
 
     <p>Coding to Learn is all about reading the documentation. Be patient. Be methodological. Learn how to learn, by troubleshooting with a peer, and trying it yourself through trial and error. If you're struggling, review the Coding Tips PDF. The blessing and the curse of creative coding is that there will be a half-dozen different ways to accomplish a goal. Be open to <a href="https://frankchimero.com/blog/2013/what-screens-want/" target="_blank">flux</a>, change, and surprise. If you're open to it: there can often be joy and delight too. Overcoming challenges can be fulfilling.
     <blockquote>Fundamentally, creativity is a question of time. Mostly of our daily activity with computers happens through hopefully speedy but ossified software. We use the computer in “speedrun mode.”19 This is the paradox of creative coding: the coding part is supposed to make things faster, the creative part requires that things go slowly.</blockquote>
@@ -377,7 +421,7 @@ keep it here! Semantic structure is just as important as syntax. -->
 
 <section>
     <div class="row">
-        <h3>CSS: Syntax & 3-Ways</h3>
+        <h3 id="syntax3ways">CSS: Syntax & 3-Ways</h3>
         <figure class="left"><img src="images/css-syntax.png"></figure>
         <figure class="right"><img src="images/css-syntax-1.jpeg"></figure>
         <p>A CSS rule consists of a selector and a declaration block.</p>
@@ -397,7 +441,7 @@ keep it here! Semantic structure is just as important as syntax. -->
 
 <section>
     <div class="row">
-        <h3>CSS: Class vs ID</h3>
+        <h3 id="classvsid">CSS: Class vs ID</h3>
         <figure class="right"><img src="images/Difference-Between-id-and-class-in-CSS-Comparison-Summary.jpg"><figcaption>Placeholder Credit: TBA</figcaption></figure>
         <p>Class = Multiple. ID = One. Think of a CSS Class as a stream of water, cascading down to multiple elements on the page<sup style="color:grey">(internal)</sup>, and multiple pages <sup style="color:grey">(external)</sup>. 
 
@@ -413,7 +457,7 @@ keep it here! Semantic structure is just as important as syntax. -->
 
 <section>
     <div>
-    <h3>CSS: Positioning 5-Ways</h3>
+    <h3 id="positioning">CSS: Positioning 5-Ways</h3>
        <div> <figure class="right"><img src="images/waterfall.gif"><figcaption>Placeholder Credit: TBA</figcaption></figure>
         <ol>
             <li><b>static</b></li><p>HTML elements are positioned static by default. <span style="color:grey">Static positioned elements are <i>not affected</i> by the top, bottom, left, and right properties.</span> An element with position: static; is not positioned in any special way; it is always positioned according to the normal flow of the page.</p>
@@ -464,7 +508,7 @@ keep it here! Semantic structure is just as important as syntax. -->
 
 <figure>
     <img src="images/css-cheatsheet.png">
-<figcaption><button><a href="https://i.pinimg.com/originals/37/9d/b5/379db57fefcaaeb28906b811490db468.png">Download the full image</a></button></figcaption>
+<figcaption><button-2><a href="https://i.pinimg.com/originals/37/9d/b5/379db57fefcaaeb28906b811490db468.png">Download the full image</a></button-2></figcaption>
 </figure>
 <br>
 <p><span style="color:grey">Did you know?</span> Buttons are a default html element. Want to style them even further? Check out: <a href="https://css-tricks.com/a-complete-guide-to-links-and-buttons/" target="_blank">CSS Tricks Complete Guide to Links and Buttons</a></p>
@@ -486,7 +530,8 @@ ref: https://www.w3schools.com/howto/howto_css_two_columns.asp
 for more advanced layouts, check out CSS Grids or CSS Flexbox */
 -->
 <footer>
-<h3>This is how to make a simple 2-column layout using <a href="https://www.w3schools.com/Css/css_float.asp" target="_blank">floats</a></h3>
+<h3 id="footers-floats">Footers & Floats</h3>
+<p>This is how to make a simple 2-column layout using <a href="https://www.w3schools.com/Css/css_float.asp" target="_blank">floats</a></p>
 <div class="row">
     <div class="column">
     <!--<ul> = undordered list <ol> is ordered list -->
@@ -516,19 +561,19 @@ for more advanced layouts, check out CSS Grids or CSS Flexbox */
             <img src="images/ice-cream-in-a-cone-isolated-1465725727v7W.jpg"><figcaption>PHOTO: Ekaterina Sysoeva, <a href="https://www.publicdomainpictures.net/en/view-image.php?image=174511&picture=ice-cream-in-a-cone-isolated" target="_blank">Public Domain Pictures</a></figcaption>
         </figure>
 <h1>Keep Practicing Daily:</h1>
-<nav><h2>
-  <a href="https://docs.google.com/document/d/1kGJXt7dUiRI2CfYjNBglkXtNMqB39Nwb0QIDxxfJMVs/edit?usp=sharing" target="_blank">HTML First Page</a> |
-  <a href="https://docs.google.com/document/d/1fEcm_tGwygtzZCvYEHUmEZGy6bTX-o3zrV6rnGcxx7k/edit?usp=sharing" target="_blank">Cheat Sheet</a> |
-  <a href="https://linktr.ee/notreeisanisland" target="_blank">Starter Pack</a> |
-  <a href="https://hacks.mozilla.org/2019/10/why-is-css-so-weird/" target="_blank">Why is CSS so Weird?</a> |
-  <a href="https://lange-lange.github.io/position/">CSS Positioning</a> |
-  <a href="https://lange-lange.github.io/css-flexbox-part-2/responsive-flexbox.html">CSS Flexbox</a> |
+<nav><h3>
+  <a href="https://docs.google.com/document/d/1kGJXt7dUiRI2CfYjNBglkXtNMqB39Nwb0QIDxxfJMVs/edit?usp=sharing" target="_blank">HTML First Page</a> 
+  <a href="https://docs.google.com/document/d/1fEcm_tGwygtzZCvYEHUmEZGy6bTX-o3zrV6rnGcxx7k/edit?usp=sharing" target="_blank">Cheat Sheet</a> 
+  <a href="https://linktr.ee/notreeisanisland" target="_blank">Starter Pack</a> 
+  <a href="https://hacks.mozilla.org/2019/10/why-is-css-so-weird/" target="_blank">Why is CSS so Weird?</a>
+  <a href="https://lange-lange.github.io/position/">CSS Positioning</a>
+  <a href="https://lange-lange.github.io/css-flexbox-part-2/responsive-flexbox.html">CSS Flexbox</a>
   <a href="https://lange-lange.github.io/css-grids/cssgrid.html">CSS Grids</a> |
   Web Typography |
   Relative Units |
   Responsive |
   Time-based (JS) |
-</h2>
+</h3>
 </nav>
 
 <h3 style="font-family:cursive;">Enjoy the ride</h3>
